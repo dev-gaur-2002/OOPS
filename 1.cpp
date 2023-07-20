@@ -1,6 +1,11 @@
 #include<bits/stdc++.h>
 #include<algorithm>
 #include"hero.cpp" //including class from other file;
+#include "employee.cpp" 
+#include "human.cpp"
+#include "singleInheritance.cpp"
+#include "multilevel.cpp"
+#include "Multiple.cpp"
 
 #define lli long long int
 using namespace std;
@@ -52,5 +57,32 @@ int main()
     cout<<Hero::timeToComplete<<endl; //accessed a static data member and it gives same for every object;
     cout<<hero1.timeToComplete<<endl; //not advised but gives true result
     cout<<Hero::func()<<endl;
+
+    Male dev;
+    cout<<dev.age<<endl;
+    cout<<dev.color<<endl;
+    dev.sleep();
+
+    cout<<dev.wieght<<endl;
+    dev.setWieght(100);
+    cout<<dev.wieght<<endl;
+
+    Dog shubham; // doggy boyyy XDD
+    shubham.getter();
+    Hr shubham;
+    shubham.getter();
+
+    Neko nekochan;
+    nekochan.Cats ::getter(); // this is used to sort out the ambiguity if there are 2 function names same for a class that inherits 2 classes
+    nekochan.Pets :: getter();
+    nekochan.getterCats();
+
     return 0;
 }
+
+
+// learn about 
+
+// padding 
+//const keyword
+//initialisation list
